@@ -4,8 +4,9 @@ const routes = express.Router();
 
 routes.get('/', (req,res) => {
   return res.json({
-    evento: 'Semana Omnistack 11',
-    aluno: 'Maquina de sexo'
+    teste: "okay",
+    funciona: "sim!",
+    message: "=D"
   });
 });
 
