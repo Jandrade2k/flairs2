@@ -1,7 +1,7 @@
 
 exports.up = function(knex) {
   return knex.schema.createTable('events', function (t) {
-      t.increments('id').primary();
+      t.string('id').primary();
       t.string('name').notNullable();
       t.string('tipo_id').notNullable();
       t.string('porposal_id').notNullable();
@@ -19,9 +19,9 @@ exports.up = function(knex) {
       t.string('payment_method').notNullable();
       t.integer('qtd_bar').notNullable();
       t.string('customer_id').notNullable();
-      t.foreign('tipo_id').references('id').inTable('events_tipos');
-      t.foreign('porposal_id').references('id').inTable('proposal');
-      t.foreign('customer_id').references('id').inTable('customers');
+      // t.foreign('tipo_id').references('id').inTable('events_tipos');
+      // t.foreign('porposal_id').references('id').inTable('proposal');
+      // t.foreign('customer_id').references('id').inTable('customers');
   })
 };
 

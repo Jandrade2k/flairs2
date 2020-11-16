@@ -1,8 +1,13 @@
 
 exports.up = function(knex) {
   return knex.schema.createTable('recipes', function(t) {
-      t.increments('id').primary();
-      t.string('preparation_mode').notNullable();
+      t.string('id').primary();
+      t.text('preparation_mode').notNullable();
+      t.text('ingredient_id').notNullable();
+      t.string('qtd_d').notNullable();
+      t.text('garrison');
+      t.text('qtd_g');
+      t.string('cup').notNullable();
   })
 };
 
